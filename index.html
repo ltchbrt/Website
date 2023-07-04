@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta name="description"
+          content="印度、菲律宾、巴西、日本、全球棋牌包网,天博与您强强联手,助力新品牌开启财富之路！海量棋牌游戏，一站式服务，期待与您共创辉煌！">
+    <meta name="keywords" content="印度、菲律宾、巴西、日本、全球棋牌包网  海量棋牌游戏">
+    <meta name="twitter:image" content="/product.png?v=0.1">
+    <meta property="og:image" content="/product.png?v=0.1">
+
+
+    <title>Game Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Link to the JavaScript file -->
+    <script src="./js/SlideIn.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./swiper/js/swiper.min.js"></script>
+
+</head>
+
+<body style="background-color: #000;">
+<script>
+    // Add event listener to toggle button
+    const toggleButton = document.querySelector('.navbar-toggler');
+    toggleButton.addEventListener('click', function() {
+      this.classList.toggle('collapsed'); //Add the 'collapsed' class when clicked
+    });
+
+
+
+</script>
+<script>
+// document.querySelectorAll('.navbar-nav .nav-link.dropdown-toggle').forEach(function(toggle) {
+//   toggle.addEventListener('click', function() {
+//     this.querySelector('.arrow').classList.toggle('rotate');
+//   });
+// });
+
+
+</script>
+
+<script>
+    const loadScript = (src) => {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.onload = resolve;
+            script.onerror = reject;
+            script.async = true;
+            script.src = "https://www.googletagmanager.com/gtag/js?id=AW-10817561885";
+            if (document.head.append) {
+                document.head.append(script);
+            } else {
+                document.getElementsByTagName('head')[0].appendChild(script);
+            }
+        });
+    };
+    const load=()=>{
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-10817561885');
+    }
+    async  function  initPage(){
+        const path = window.location.pathname.replace(/^\//, "").split("/");
+        let code=""
+        if(path.length<=1) code=path[0]
+        else code=path[1]
+        if(code==='1002'){
+            await loadScript()
+            load()
+        }else{
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MWX38PZ');
+        }
+        // console.log(window.location);
+
+    }
+    // const path = window.location.pathname.replace(/^\//, "").split("/");
+    // let code="1001"
+    // if(path.length<=1) code=path[0]
+    // else code=path[1]
+    // if(code==='1002'){
+    //
+    // }else{
+    //
+    // }
+    initPage()
+
+</script>
+
+<script>
+        /**
+         * @author django
+         * @description 兼容 iOS10以上 禁止缩放
+         * @date 2021-7-1
+         */
+        function noZoom(){
+            window.onload=function () {
+                document.addEventListener('touchstart',function (event) {
+                    if(event.touches.length>1){
+                        event.preventDefault();
+                    }
+                });
+                let lastTouchEnd=0;
+                document.addEventListener('touchend',function (event) {
+                    let now=(new Date()).getTime();
+                    if(now-lastTouchEnd<=300){
+                        event.preventDefault();
+                    }
+                    lastTouchEnd=now;
+                },false);
+                document.addEventListener('gesturestart', function (event) {
+                    event.preventDefault();
+                });
+            }
+        }
+        noZoom()
+        // console.log(window.location);
+
+
+</script>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-light main-nav" style="background-color: #19191a; ">
+    <a class="navbar-brand">
+        <img src="./pictures/logo/logo.png" alt="Logo" class="navbar-logo">
+    </a>
+
+    <a  class="navbar-toggler" onclick="myFunction()">
+    <i class="fa fa-bars" style="    color: #d1b315;"></i>
+  </a>
+    <div style="width: 100%;" id="navbarNav">
+        <ul style="width: 100%;
+    display: flex;
+    justify-content: flex-end;" id="navdata" >
+            <li class="nav-item active">
+                <a class="nav-link  active" href="index.html" id="home"
+                   style="color: #ffe4c8;font-size: 14px;    margin-right: 1rem;font-weight: 400;">Home</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#brandAdvantagesSection" id="brandAdvantages"
+                style="color: #ffe4c8;font-size: 14px;    margin-right: 1rem;font-weight: 400;">Brand advantages</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#productHighlightsSection" id="prodHighlights"
+                style="color: #ffe4c8;font-size: 14px;     margin-right: 1rem;font-weight: 400;">Product highlights</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#servicePlanningSection" id="servicePlanning"
+                style="color: #ffe4c8;font-size: 14px;     margin-right: 1rem;font-weight: 400;">Service planning</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#excellentTechSection" id="excelTech"
+                style="color: #ffe4c8;font-size: 14px;    margin-right: 1rem; font-weight: 400;">Excellent Tech</a>
+            </li>
+            <li class="nav-item" >
+                <a class="nav-link" href="#businessCooperationSection" id="bussCooperation"
+                style="color: #ffe4c8;font-size: 14px;    margin-right: 1rem; font-weight: 400;">Business
+                    Cooperation</a>
+            </li>
+            <li class="nav-item dropdown"  >
+                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false"
+                   style="color: #ffe4c8;font-size:  14px;     margin-right: 1rem;font-weight: 400;">
+                    <i class="fas fa-globe"></i> Language <span class="arrow"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown"
+                     style="background-color: #19191a;">
+                    <a class="dropdown-item" href="#" id="chineseLink" style="color: #ffe4c8;">简体中文</a>
+                    <a class="dropdown-item" href="index.html" id="englishLink" style="color: #ffe4c8;">English</a>
+                    <script src="./js/mandarin.js"></script>
+                    <!-- Add more language options as needed -->
+                </div>
+            </li>
+           
+        </ul>
+      
+    </div>
+</nav>
+<!--END HERE-->
+
+<!-- Home Swiper -->
+
+<div class="swiper-container" style="overflow: hidden;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="swiper-slide-content">
+                <img id="image1"  width="0" height="0" src="./pictures/swiper/image1.png" alt="Slide 1"/>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-slide-content">
+                <img width="1920px" height="600px" src="./pictures/swiper/image2.png" alt="Slide 2"/>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-slide-content">
+                <img width="1920px" height="600px" src="./pictures/swiper/image3.png" alt="Slide 03"/>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <!--  <div class="swiper-button-next"></div>-->
+    <!--  <div class="swiper-button-prev"></div>-->
+</div>
+
+<!--END HERE-->
+
+
+<!-- Slider JavaScript here -->
+<script>
+  var dropdownToggle = document.querySelector('.dropdown-toggle');
+var arrowIcon = dropdownToggle.querySelector('.arrow');
+
+dropdownToggle.addEventListener('click', function() {
+  arrowIcon.classList.toggle('rotate');
+});
+
+function myFunction() {
+  var x = document.getElementById("navbarNav");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+var x = window.matchMedia("(max-width: 1000px)")
+$(".nav-item").on('click', function() {
+    if(x.matches){
+        myFunction()
+    }else{
+
+    }
+
+})
+
+
+</script>
+
+<script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            autoplay: {
+            delay: 3000, // Adjust the delay (in milliseconds) between slides
+            disableOnInteraction: false // Allow user interaction to prevent autoplay from stopping
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                  bulletClass: 'swiper-pagination-bullet',
+                bulletActiveClass: 'swiper-pagination-bullet-active'
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            on: {
+              init: function () {
+                var activeSlide = this.slides[this.activeIndex];
+                activeSlide.querySelector('.swiper-slide-content').style.opacity = 1;
+                activeSlide.style.opacity = 1;
+                activeSlide.style.transform = 'scale(1)';
+              },
+            slideChangeTransitionStart: function () {
+                  var slides = this.slides;
+                    for (var i = 0; i < slides.length; i++) {
+                        slides[i].style.opacity = 0;
+                        slides[i].querySelector('.swiper-slide-content').style.opacity = 0;
+                        }
+            },
+             slideChangeTransitionEnd: function () {
+                    var activeSlide = this.slides[this.activeIndex];
+                    activeSlide.style.opacity = 1;
+                    activeSlide.querySelector('.swiper-slide-content').style.opacity = 1;
+                }
+            }
+        });
+
+
+</script>
+
+<!--Brand advantages-->
+<div class="dividerStart slide-in" style="background-image: url('pictures/lines/line1.png'); "">
+    <div class="intro fade-in-down animated">
+        <h1 class="intro-heading" id="brandAdvantagesSection">Brand advantages</h1>
+        <h2 id="text1">Only do for the best in the industry</h2>
+    </div>
+</div>
+<div class="dividerEnd fade-in-down animated" style="background-image: url('pictures/lines/line3.png');">
+     <script src="./js/mandarin.js"></script>
+</div>
+<!--END HERE-->
+
+
+<!--2 Column with sliding list and Image-->
+<!--Left=60 Right= 40-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4" id="med_girl">
+            <!-- remove margin-right: 120px and set margin-top = 50% -->
+            <div class="right-image slide-inR" style=" float: left; display: flex;
+                  justify-content: center;
+                    align-items: center;" id="med1_girl" >
+                <img src="./pictures/icon/girl.png" alt="Girl Model" class="img-fluid">
+            </div>
+
+        </div>
+        <div class="col-lg-8 ">
+            <ul class="list-group" style="float:left; ">
+                <li class="list-group-item slide-in" style="background-color: transparent;  background-image: url('pictures/icon/border.png');">
+                    <div class="image-parent" style="width:100%;">
+                        <img src="./pictures/icon/icon1.png" class="img-fluid" alt="Icon 1"
+                             style="margin-top: 25px; height: 50px; width: 50px;">
+                        <span class="text" id="span1" style="margin-left: 5px; margin-top: 10px;">Creating mature and stable product</span>
+                        <p class="little-text" id="par1" style="margin-left: 80px; margin-top: -25px;">original Application
+                            creation, Best design, and Smooth experience</p>
+                    </div>
+                </li>
+                <li class="list-group-item slide-in" style="background-color: transparent;  background-image: url('pictures/icon/border.png');">
+                    <div class="image-parent" style="width: 90%;">
+                        <img src="./pictures/icon/icon2.png" class="img-fluid" alt="Icon 2"
+                             style="margin-top: 25px; height: 50px; width: 50px;">
+                        <span class="text" id="span2" style="margin-left: 5px; margin-top: 10px;">Exclusive and only Channel</span>
+                        <p class="little-text"  id="par2" style="margin-left: 80px; margin-top: -25px;">Our group provides
+                            exclusive high-quality payment channels as your security guard.</p>
+                    </div>
+                </li>
+                <li class="list-group-item slide-in" style="background-color: transparent;  background-image: url('pictures/icon/border.png');">
+                    <div class="image-parent" style="width: 90%;">
+                        <img src="./pictures/icon/icon3.png" class="img-fluid" alt="Icon 3"
+                             style="margin-top: 25px; height: 50px; width: 50px;">
+                        <span class="text" id="span3" style="margin-left: 5px; margin-top: 10px;">Hyper intelligent risk control system</span>
+                        <p class="little-text" id="par3" style="margin-left: 80px; margin-top: -25px;">Ultra-intelligent risk
+                            control system, anti-fraud, guarantee benefits for platform and users.</p>
+                    </div>
+                </li>
+                <li class="list-group-item slide-in" style="background-color: transparent;  background-image: url('pictures/icon/border.png');">
+                    <div class="image-parent" style="width: 70%;">
+                        <img src="./pictures/icon/icon4.png" class="img-fluid" alt="Icon 4"
+                             style="margin-top: 25px; height: 50px; width: 50px;">
+                        <span class="text" id="span4" style="margin-left: 5px; margin-top: 10px;">Custom LOGO</span>
+                        <p class="little-text" id="par4" style="margin-left: 80px; margin-top: -25px;">International design team
+                            custom LOGO, fully upgrade for your brand.</p>
+                    </div>
+                </li>
+            </ul>
+           
+        </div>
+  <div class="col-lg-4" id="start_girl">
+            <!-- remove margin-right: 120px and set margin-top = 50% -->
+            <div class="right-image slide-inR" style=" float: left; display: flex;
+                  justify-content: center;
+                    align-items: center;"  >
+                <img src="./pictures/icon/girl.png" alt="Girl Model" class="img-fluid" style="margin-top: 50%;">
+            </div>
+
+        </div>
+       
+      
+    </div>
+        <script src="./js/mandarin.js"></script>
+</div>
+<!--END HERE-->
+
+
+<!--Slide in when Scroll-->
+
+<script>
+  function slideInElements() {
+  const elements = document.querySelectorAll('.slide-in');
+
+  function checkSlide() {
+    elements.forEach((element) => {
+      // Calculate the position of the element relative to the viewport
+      const slideInAt = (window.scrollY + window.innerHeight) - element.offsetHeight / 2;
+      // Calculate the bottom position of the element
+      const elementBottom = element.offsetTop + element.offsetHeight;
+
+      // Add the 'show' class if the element is within the viewport
+      if (slideInAt > element.offsetTop && window.scrollY < elementBottom) {
+        element.classList.add('show');
+      } else {
+        element.classList.remove('show');
+      }
+    });
+  }
+
+  // Call the checkSlide function initially when the page loads
+  checkSlide();
+
+  // Add the event listener to check the slide position on scroll
+  window.addEventListener('scroll', checkSlide);
+}
+
+// Call the slideInElements function to enable the slide-in effect
+slideInElements();
+
+
+</script>
+
+<!--Product Highlights -->
+<div class="dividerStart-Second" style="background-color: transparent;">
+    <div class="intro fade-in-down animated">
+        <h1 class="intro-heading" id="productHighlightsSection">Product highlights</h1>
+        <h2 id="text2">Selected top Rummy games which contains diversity plays</h2>
+    </div>
+</div>
+<div class="dividerEnd fade-in-down animated" style="background-image: url('pictures/lines/line3.png');">
+         <script src="./js/mandarin.js"></script>
+</div>
+<!--END HERE-->
+
+
+<!--3 Column with sliding list and Image-->
+<!--33.3 / 33.3 / 33.3-->
+<!-- Add Display Flex -->
+<div class="container2" >
+    <div  style="    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;" >
+     <div class="med_icon" id="med_icon" >
+         <img src="./pictures/list-icon/product-img.png" alt="Product Image" class="Prod-img"
+              style="margin-top: 50px; height: 350px; width: 350px;">
+     </div>
+     <div class="data_name">
+        <div >
+            <ul class="list-group2" style="width: 100%;">
+                    <li class="list-group-item2 list_size1">
+                    <div class="image-parent2">
+                        <span class="text2" id="span5" >Auto verify withdraw</span>
+                    </div>
+                      <img src="./pictures/list-icon/list-icon-right1.png"  alt="Icon 1"
+                             >
+                      
+                </li>
+                 <li class="list-group-item2 list_size"  >
+                    <div class="image-parent2">
+                        <span class="text2" id="span6" >Intelligence activity system</span>
+                      </div>
+                        <img src="./pictures/list-icon/list-icon-right2.png" alt="Icon 2"
+                             >
+                </li>
+                        <li class="list-group-item2 list_size" >
+                    <div class="image-parent2">
+                        <span class="text2" id="span7" >World leading gaming platform develop Tech</span>
+                    </div>
+                     <img src="./pictures/list-icon/list-icon-right3.png" alt="Icon 3"
+                        >
+                    
+                </li>
+                <li class="list-group-item2 list_size1">
+                    <div class="image-parent2">
+                        <span class="text2" id="span8">all guarantee for recharge and withdraw</span>
+                    </div>
+                      <img src="./pictures/list-icon/list-icon-right4.png" class="img-fluid" alt="Icon 4"
+                            >
+                       
+                </li>
+            </ul>
+        </div>
+
+
+        <div style="border-left: 6px solid gold;
+        height: 500px;
+        margin-right: 3rem;" id="line"></div>
+           <div >
+
+        <div style="    display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                gap: 1rem;
+                align-items: center;" >
+                <div class="med_icon" id="start_icon">
+                    <img src="./pictures/list-icon/product-img.png" alt="Product Image" class="Prod-img"
+                        style="margin-top: 50px; height: 350px; width: 350px;">
+                </div>
+       
+   
+            <ul class="list-group2 animated-list" style="overflow: hidden;">
+                <li class="list-group-item3 list_size12">
+                   
+                        <img src="./pictures/list-icon/list-icon-right5.png" class="img-fluid" alt="Icon 5"
+                            >
+                            <div class="image-parent2" style="padding-left: 0;">
+                                <span class="text2" id="span9" >AI risk alarm function</span>
+                            </div>
+                      
+                </li>
+                <li class="list-group-item3 list_size11 animated-item "
+                    style="animation-delay: 0.4s;">
+                   
+                        <img src="./pictures/list-icon/list-icon-right6.png" class="img-fluid" alt="Icon 6"
+                            >
+                            <div class="image-parent2 slide-inR" style="padding-left: 8%;">
+                                <span class="text2" id="span10" >7*24 service</span>
+                            </div>
+                       
+                </li>
+                <li class="list-group-item3 list_size11  animated-item "
+                    style="animation-delay: 0.6s;">
+                    
+                        <img src="./pictures/list-icon/list-icon-right7.png" class="img-fluid" alt="Icon 7"
+                             >
+                             <div class="image-parent2 slide-inR" style="padding-left: 8%;">
+                                <span class="text2" id="span11">Merchant self build recharge channel</span>
+                            </div>
+                      
+                </li>
+                <li class="list-group-item3 list_size12  animated-item "
+                    style="animation-delay: 0.8s;">
+                    
+                        <img src="./pictures/list-icon/list-icon-right8.png" class="img-fluid" alt="Icon 8"
+                             >
+                             <div class="right-image2 slide-inR" style="padding-left: 0; margin-top: -25px;">
+                                <span class="text2" id="span12" >Free transfer wallet</span>
+                            </div>
+                       
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <script src="./js/mandarin.js"></script>
+</div>
+<!--END HERE-->
+
+<!--Service planning -->
+<div class="dividerStart-Second" style="background-color: transparent; margin-top: 40px;">
+    <div class="intro fade-in-down animated">
+        <h1 class="intro-heading" id="servicePlanningSection">Service planning</h1>
+        <h2 id="text3">High quality custom service</h2>
+    </div>
+</div>
+<div class="dividerEnd fade-in-down animated" style="background-image: url('pictures/lines/line3.png');">
+ <script src="./js/mandarin.js"></script>
+</div>
+<!--END HERE-->
+
+<!-- Flex Box Service Planning-->
+<div class="flex-container" style="overflow: hidden;">
+    <ul class="flex-group" style="overflow: hidden;   padding-left: 0 !important">
+        <li class="fade-in-animation" style="animation-delay: 0.1s">
+            <div class="data">
+                <img src="./pictures/IconS/IconS1.png" class="img-fluid1" alt="Service Icon" style="margin-left: 11px;">
+                <p class="little-text2" id="par5" style=" margin-top: 10px; font-size: 23px; margin-left: -23px;">
+                    Communication</p>
+            </div>
+        </li>
+        <li class="fade-in-animation" style="animation-delay: 0.2s">
+            <div class="arrows">
+                <img src="./pictures/IconS/arrow-icon.png" class="arrow-icon" alt="Service Icon"
+                     style="height: 25px; width: 40px;">
+            </div>
+        </li>
+        <li class="fade-in-animation" style="animation-delay: 0.3s">
+            <div class="data">
+                <img src="./pictures/IconS/IconS2.png" class="img-fluid1" alt="Service Icon">
+                <p class="little-text2" id="par6" style=" margin-top: 10px; font-size: 23px; margin-left: 8px;">Confirmed</p>
+            </div>
+        </li>
+        <li class="fade-in-animation" style="animation-delay: 0.4s">
+            <div class="arrows">
+                <img src="./pictures/IconS/arrow-icon.png" class="arrow-icon" alt="Service Icon"
+                     style="height: 25px; width: 40px; margin-right: 18%;">
+            </div>
+        </li>
+        <li class="fade-in-animation" style="animation-delay: 0.5s">
+            <div class="data">
+                <img src="./pictures/IconS/IconS3.png" class="img-fluid1" alt="Service Icon">
+                <p class="little-text2" id="par7" style=" margin-top: 10px; font-size: 23px; margin-left: 30px;">Order</p>
+            </div>
+
+        </li>
+        <li class="fade-in-animation" style="animation-delay: 0.6s">
+            <div class="arrows">
+                <img src="./pictures/IconS/arrow-icon.png" class="img-fluid1" alt="Service Icon"
+                     style="height: 25px; width: 40px; margin-right: 18%;">
+            </div>
+        </li>
+        <li class="fade-in-animation" style="animation-delay: 0.7s">
+            <div class="data">
+                <img src="./pictures/IconS/IconS4.png" class="img-fluid1" alt="Service Icon">
+                <p class="little-text2" id="par8" style=" margin-top: 10px; font-size: 23px; margin-left: 38px;">Build</p>
+            </div>
+        </li>
+        <li class="fade-in-animation" style="animation-delay: 0.8s">
+            <div class="arrows">
+                <img src="./pictures/IconS/arrow-icon.png" class="img-fluid1" alt="Service Icon"
+                     style="height:  25px; width:40px; margin-right: 18%;">
+            </div>
+        </li>
+        <li class="fade-in-animation" style="animation-delay: 0.9s">
+            <div class="data">
+                <img src="./pictures/IconS/IconS5.png" class="img-fluid1" alt="Service Icon">
+                <p class="little-text2" id="par9" style=" margin-top: 10px; font-size: 23px; margin-left: 26px">Publish</p>
+            </div>
+        </li>
+    </ul>
+     <script src="./js/mandarin.js"></script>
+</div>
+<!--END HERE-->
+
+
+<!-- Excellent Technology -->
+<div class="dividerStart-Second" style="background-color: transparent; margin-top: 40px; ">
+    <div class="intro fade-in-down animated">
+        <h1 class="intro-heading" id="excellentTechSection">Excellent Technology</h1>
+        <h2 id="text4">Excellent tech as your security guard</h2>
+    </div>
+</div>
+<div class="dividerEnd fade-in-down animated" style="background-image: url('pictures/lines/line3.png');">
+<script src="./js/mandarin.js"></script>
+</div>
+<!--END HERE-->
+
+<!-- Flex Box Excellent Technology-->
+<div class="flex-container2">
+    <ul class="flex-group" style="overflow: hidden;">
+        <div class="box-data_container">
+        <li class="list-group-item4 fade-in-animation" style="animation-delay: 0.1s;  background-image: url('pictures/iconT/bg-tech.png');">
+            <div class="box-data">
+                <img src="./pictures/iconT/iconT1.png"  alt="Service Icon">
+                <p id="par10">Intelligent System</p>
+                <span  id="span13">Powerful and stable back end provides multiple data analysis, providing your income in anytime to improving operation</span>
+            </div>
+        </li>
+        <li class="list-group-item4 fade-in-animation" style="animation-delay: 0.2s;  background-image: url('pictures/iconT/bg-tech.png');">
+            <div class="box-data">
+                <img src="./pictures/iconT/iconT2.png"  alt="Service Icon">
+                <p id="par11">International<br> function</p>
+                <span  id="span14">Multiple language to satisfy in different countries</span>
+            </div>
+
+        </li>
+    </div>
+
+    <div class="box-data_container">
+        <li class="list-group-item4 fade-in-animation" style="animation-delay: 0.3s;  background-image: url('pictures/iconT/bg-tech.png');">
+            <div class="box-data">
+                <img src="./pictures/iconT/iconT3.png"  alt="Service Icon">
+                <p  id="par12">Professional cloud planning</p>
+                <span id="span15">Customized most effective profitable by our specialized team</span>
+            </div>
+        </li>
+        <li class="list-group-item4 fade-in-animation" style="animation-delay: 0.4s; background-image: url('pictures/iconT/bg-tech.png');">
+            <div class="box-data">
+                <img src="./pictures/iconT/iconT4.png"  alt="Service Icon">
+                <p id="par13">Anti-hijacking <br> system</p>
+                <span  id="span16">Self developed anti-hijacking browser, and military-grade encryption algorithm</span>
+            </div>
+        </li>
+    </div>
+    </ul>
+    <script src="./js/mandarin.js"></script>
+</div>
+<!--END HERE-->
+
+<!--Chinese Characters with file to DL-->
+<div class="flex-container3">
+    <ul class="flex-group" style="overflow:hidden; padding-bottom: 10PX;">
+        <li class="list-group-item5">
+            <div class="flex-item">
+                <a href="./apk/TB_English.apk" class="download-link" download text="英语">英语</a>
+            </div>
+        </li>
+        <li class="list-group-item5">
+            <div class="flex-item">
+                <a href="./apk/TB_Portugal.apk" class="download-link" download text="葡萄牙语">葡萄牙语</a>
+            </div>
+        </li>
+        <li class="list-group-item5">
+  <div class="flex-item">
+                <a href="./apk/TB_Spain.apk" class="download-link" download text="西班牙语">西班牙语</a>
+            </div>
+        </li>
+        <li class="list-group-item5">
+            <div class="flex-item">
+                <a href="./apk/TB_Thai.apk" class="download-link" download text="泰语">泰语</a>
+            </div>
+        </li>
+    </ul>
+    <script src="./js/mandarin.js"></script>
+</div>
+
+
+<!-- Business cooperation -->
+<div class="dividerStart-Second" style="background-color: transparent; margin-top: -90px;">
+    <div class="intro">
+        <h1 class="intro-heading fade-in-down animated" id="businessCooperationSection">Business cooperation</h1>
+        <h2 id="text5">Contact us, win-win cooperation</h2>
+    </div>
+</div>
+<div class="dividerEnd fade-in-down animated" style="background-image: url('pictures/lines/line3.png');">
+    <script src="./js/mandarin.js"></script>
+</div>
+<!--END HERE-->
+
+<!--Contacts Here-->
+<div class="flex-container4" style="overflow: hidden;">
+    <div class="flex-item2 fade-in-animation" style="overflow:hidden; animation-delay: 0.1s;">
+        <a href="https://t.me/Tbetsw88" class="text5">
+            <img src="./pictures/contactsBG/Telegram-icon.png" class="img-fluid2" alt="Telegram-icon">
+            <p class="text5" style=" margin-top: 1px;">Telegram : @Tbetsw88</p>
+        </a>
+    </div>
+    ``
+
+    <div class="flex-item2 fade-in-animation" style="overflow:hidden; animation-delay: 0.2s;">
+        <a href="https://api.whatsapp.com/send?phone=447599588888" class="text5">
+            <img src="./pictures/contactsBG/WhatsApp-icon.png" class="img-fluid2" alt="WhatsApp-icon">
+            <p class="text5" style=" margin-top: 1px;">WhatsApp : +447599588888</p>
+        </a>
+    </div>
+</div>
+<div class="flex-item3" style="overflow:hidden;">
+    <p class="text6 fade-in-up" id="par14" style=" margin-top: 1px;">Tbet is partnering with known company, we are happy to help
+        new brand to create wealth! Massive Rummy games, one-stop service, looking forward to creating brilliance with
+        you </p>
+    </a>
+        <script src="./js/mandarin.js"></script>
+</div>
+<!--END HERE-->
+
+<!--Business Cooperation-->
+<!--Footer-->
+<footer style="background-image: url(pictures/footer/footer-bg.png);">
+    <div class="footer-content" style="overflow: hidden;">
+      
+        <div class="inner-div-right" style="overflow: hidden;">
+            <div class="flex-container5" style="overflow: hidden;">
+                <h6 class="foot_name">Follow us on</h6>
+                <div class="foot_size" style="display: flex;">
+                    <div class="flex-item4">
+                        <a href="https://t.me/Tbetsw88" class="text7">
+                            <img src="./pictures/contactsNoBG/Telegram-icon2.png" class="img-fluid4" alt="Telegram-icon"
+                                 style="margin-right: 205px">
+                            <p class="text5 data" style=" margin-top: -45px;">Telegram : @Tbetsw88</p>
+                        </a>
+                    </div>
+                    <div class="flex-item4">
+                        <a href="https://t.me/Tbetsw88" class="text7">
+                            <img src="./pictures/contactsNoBG/WhatsApp-icon2.png" class="img-fluid4" alt="WhatsApp-icon"
+                                 style="margin-right: 235px;">
+                            <p class="text5 data" style=" margin-top: -45px;">WhatsApp : +447599588888</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/mandarin.js"></script>
+</footer>
+
+</body>
+</html>
