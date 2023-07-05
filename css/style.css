@@ -829,7 +829,7 @@ transform: translateX(100%);
   height: 100px;
   /* padding: 7px; */
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
   margin-bottom: 1rem;
@@ -868,8 +868,8 @@ transform: translateX(100%);
   display: flex;
   /* margin-bottom: 1rem; */
   opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInRight 0.5s ease-out forwards;
+  transform: translateX(100%);
+  animation: slideInLeft 0.5s ease-out forwards;
   border: transparent;
   padding: 0;
   height: 100px;
